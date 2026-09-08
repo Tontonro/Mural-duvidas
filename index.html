@@ -1,55 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mural de Publicações 2.0</title>
-  <link rel="stylesheet" href="src/css/style.css">
-</head>
-<body>
-  <header class="cabecalho">
-    <div class="limite">
-      <p class="etiqueta">Programação para Internet</p>
-      <h1>Mural de Publicações 2.0</h1>
-      <p class="subtitulo">Publicações da DummyJSON organizadas para leitura e pesquisa.</p>
-    </div>
-  </header>
-
-  <main class="limite">
-    <section class="painel-controles" aria-labelledby="titulo-controles">
-      <div>
-        <h2 id="titulo-controles">Publicações</h2>
-        <p>Carregue os dados e pesquise por título, conteúdo ou tags.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mural de Publicações 2.0</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="limite">
+        <p class="etiqueta">Programação para Internet</p>
+        <h1>Mural de Publicações 2.0</h1>
+        <p class="subtitulo">
+          Publicações da DummyJSON organizadas para leitura e pesquisa.
+        </p>
       </div>
+    </header>
 
-      <div class="controles">
-        <button id="botao-carregar" type="button">Carregar publicações</button>
-        <label class="campo-pesquisa">
-          <span>Pesquisar nas publicações</span>
-          <input id="campo-pesquisa" type="search" placeholder="Ex.: history" disabled>
-        </label>
-        <label class="campo-ordenacao">
-          <span>Ordenar cartões</span>
-          <select id="ordenacao" disabled>
-            <option value="padrao">Ordem original</option>
-            <option value="curtidas">Mais curtidas</option>
-            <option value="visualizacoes">Mais visualizações</option>
-          </select>
-        </label>
+    <main class="limite">
+      <section class="painel-controles" aria-labelledby="titulo-controles">
+        <div>
+          <h2 id="titulo-controles">Publicações</h2>
+          <p>Carregue os dados e pesquise por título, conteúdo ou tags.</p>
+        </div>
+
+        <div class="controles">
+          <button id="botao-carregar" type="button">
+            Carregar publicações
+          </button>
+          <label class="campo-pesquisa">
+            <span>Pesquisar nas publicações</span>
+            <input
+              id="campo-pesquisa"
+              type="search"
+              placeholder="Ex.: history"
+              disabled
+            />
+          </label>
+          <label class="campo-ordenacao">
+            <span>Ordenar cartões</span>
+            <select id="ordenacao" disabled>
+              <option value="padrao">Ordem original</option>
+              <option value="curtidas">Mais curtidas</option>
+              <option value="visualizacoes">Mais visualizações</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="area-resultado" aria-live="polite" aria-busy="false">
+        <p id="mensagem" class="mensagem mensagem--inicial">
+          Clique em “Carregar publicações” para começar.
+        </p>
+        <p id="resumo" class="resumo" hidden></p>
+        <div id="lista-publicacoes" class="grade-publicacoes"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="limite">
+        <p>
+          Projeto de retomada • JavaScript, assincronismo e <code>fetch()</code>
+        </p>
+        <p>IFRN Campus Santa Cruz • Disciplina: Programação para Internet</p>
+        <p>
+          Alunos: Antonny Adryan, Lavínia Jaile, Maria Isabelly e Yasmin
+          Emanuelly
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <section class="area-resultado" aria-live="polite" aria-busy="false">
-      <p id="mensagem" class="mensagem mensagem--inicial">Clique em “Carregar publicações” para começar.</p>
-      <p id="resumo" class="resumo" hidden></p>
-      <div id="lista-publicacoes" class="grade-publicacoes"></div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="limite">Projeto de retomada • JavaScript, assincronismo e <code>fetch()</code></div>
-  </footer>
-
-  <script src="src/js/mural.js"></script>
-</body>
+    <script src="src/js/mural.js"></script>
+  </body>
 </html>
