@@ -28,4 +28,5 @@
    A principal dificuldade foi adaptar o código que esperava um array direto para a estrutura da DummyJSON, em que as publicações estão dentro de `dados.posts`. Também foi necessário acessar corretamente os dados aninhados em `reactions.likes`.
 
 10. **Que alteração foi feita além da adaptação mínima?**  
-   Foi criado um seletor de ordenação por curtidas ou visualizações. A ordenação é aplicada aos resultados atuais da pesquisa. Além disso, os cartões exibem a quantidade de `dislikes` e a interface soma e mostra o total de curtidas dos cartões exibidos.
+   Foi criado um seletor de ordenação por curtidas ou visualizações. A ordenação é aplicada aos resultados atuais da pesquisa. Além disso, os cartões exibem a quantidade de `dislikes` e a interface soma e mostra o total de curtidas dos cartões exibidos. Na parte do CSS, também foi alterada a cor principal da interface, que passou de verde para roxo.
+
